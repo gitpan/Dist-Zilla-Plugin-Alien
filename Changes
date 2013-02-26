@@ -3,8 +3,14 @@ Changes from 1739-05-15 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.003 at 2013-02-26 02:23:49 +0000
+version 0.004 at 2013-02-26 20:35:15 +0000
 ------------------------------------------
+
+  Change: d7e018c05344d57e1feb8cde1b16ed75718bcd29
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 21:34:57 +0000
+
+    Added feature to auto add binaries, added more documentation 
 
   Change: 43b46bd2a52499a2c3238c822cc0be76425c1f9f
   Author: Torsten Raudssus <torsten@raudss.us>

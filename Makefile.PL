@@ -23,9 +23,11 @@ my %WriteMakefileArgs = (
   "NAME" => "Dist::Zilla::Plugin::Alien",
   "PREREQ_PM" => {
     "Alien::Base" => "0.002",
-    "Dist::Zilla" => "4.300030"
+    "Dist::Zilla" => "4.300030",
+    "File::ShareDir" => "1.03",
+    "Path::Class" => "0.013"
   },
-  "VERSION" => "0.003",
+  "VERSION" => "0.004",
   "test" => {
     "TESTS" => "t/*.t"
   }

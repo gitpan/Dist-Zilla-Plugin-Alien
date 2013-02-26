@@ -16,10 +16,12 @@ name: Dist-Zilla-Plugin-Alien
 requires:
   Alien::Base: 0.002
   Dist::Zilla: 4.300030
+  File::ShareDir: 1.03
+  Path::Class: 0.013
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.003
+version: 0.004
 x_Dist_Zilla:
   perl:
     version: 5.014002

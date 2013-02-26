@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.003';
+  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.004';
 }
 # ABSTRACT: Dist::Zilla::PluginBundle::Basic for Alien
 
@@ -41,17 +41,21 @@ Dist::Zilla::PluginBundle::Alien - Dist::Zilla::PluginBundle::Basic for Alien
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
-=head1 DESCRIPTION
+=head1 SYNOPSIS
 
-This plugin bundle allows to use L<Dist::Zilla::Plugin::Alien> together
-with L<Dist::Zilla::PluginBundle::Basic>.
+In your B<dist.ini>:
 
   name = Alien-ffmpeg
 
   [@Alien]
   repo = http://ffmpeg.org/releases
+
+=head1 DESCRIPTION
+
+This plugin bundle allows to use L<Dist::Zilla::Plugin::Alien> together
+with L<Dist::Zilla::PluginBundle::Basic>.
 
 =head1 AUTHOR
 
