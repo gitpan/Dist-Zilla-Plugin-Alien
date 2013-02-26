@@ -1,0 +1,29 @@
+==================================================
+Changes from 1739-05-15 00:00:00 +0000 to present.
+==================================================
+
+------------------------------------------
+version 0.001 at 2013-02-26 02:07:23 +0000
+------------------------------------------
+
+  Change: 8449867c41b804b134f036f406448294bfc1965b
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 03:06:56 +0000
+
+    Fixed requirements 
+
+  Change: 5773e0a9d3ee4ffbdbfc3d7a96437f01b9ac1bf1
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 03:00:02 +0000
+
+    Added Alien PluginBundle, added tests 
+
+  Change: 0ac4dd79cd0bf465d3180a0efa66c7567e448777
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 01:09:37 +0000
+
+    initial commit 
+
+================
+End of releases.
+================
