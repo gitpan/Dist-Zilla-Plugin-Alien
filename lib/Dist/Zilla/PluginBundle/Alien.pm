@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.001';
+  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.002';
 }
 # ABSTRACT: Dist::Zilla::PluginBundle::Basic for Alien
 
@@ -22,6 +22,10 @@ sub configure {
     -bundle => '@Basic',
     -remove => ['MakeMaker'],
   });
+
+  $self->add_plugins([ 'Alien' => {
+    map { $_ => $self->payload->{$_} } keys %{$self->payload},
+  }]);
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -37,7 +41,7 @@ Dist::Zilla::PluginBundle::Alien - Dist::Zilla::PluginBundle::Basic for Alien
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 DESCRIPTION
 

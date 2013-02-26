@@ -3,8 +3,14 @@ Changes from 1739-05-15 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.001 at 2013-02-26 02:07:23 +0000
+version 0.002 at 2013-02-26 02:22:47 +0000
 ------------------------------------------
+
+  Change: ab381169b6605830ae2d534090819d9a57d40991
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 03:22:33 +0000
+
+    Ok now the PluginBundle really does what is told! 
 
   Change: 8449867c41b804b134f036f406448294bfc1965b
   Author: Torsten Raudssus <torsten@raudss.us>
