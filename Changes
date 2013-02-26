@@ -3,8 +3,14 @@ Changes from 1739-05-15 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.002 at 2013-02-26 02:22:47 +0000
+version 0.003 at 2013-02-26 02:23:49 +0000
 ------------------------------------------
+
+  Change: 43b46bd2a52499a2c3238c822cc0be76425c1f9f
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 03:23:30 +0000
+
+    It should also require Alien::Base 
 
   Change: ab381169b6605830ae2d534090819d9a57d40991
   Author: Torsten Raudssus <torsten@raudss.us>

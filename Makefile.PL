@@ -22,9 +22,10 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Alien",
   "PREREQ_PM" => {
+    "Alien::Base" => "0.002",
     "Dist::Zilla" => "4.300030"
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }

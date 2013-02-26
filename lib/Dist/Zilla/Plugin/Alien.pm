@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::Plugin::Alien::VERSION = '0.002';
+  $Dist::Zilla::Plugin::Alien::VERSION = '0.003';
 }
 # ABSTRACT: Use Alien::Base with Dist::Zilla
 
@@ -128,7 +128,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 DESCRIPTION
 
