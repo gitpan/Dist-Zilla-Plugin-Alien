@@ -21,7 +21,7 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.004
+version: 0.005
 x_Dist_Zilla:
   perl:
     version: 5.014002

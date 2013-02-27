@@ -3,8 +3,26 @@ Changes from 1739-05-15 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.004 at 2013-02-26 20:35:15 +0000
+version 0.005 at 2013-02-26 23:58:52 +0000
 ------------------------------------------
+
+  Change: 566c3731938db0320340f306a316630db8049a52
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-27 00:58:31 +0000
+
+    Make the generated bins also executable 
+
+  Change: 55836426e24aee5aae5002527f5a64d093c24b01
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 22:41:54 +0000
+
+    Ok added a carriage return in the end 
+
+  Change: 5cfd76499d8b022db72b964e8be4f19cf13187f2
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-02-26 22:41:39 +0000
+
+    A bit of documentation tuning 
 
   Change: d7e018c05344d57e1feb8cde1b16ed75718bcd29
   Author: Torsten Raudssus <torsten@raudss.us>
