@@ -3,8 +3,14 @@ Changes from 1739-05-19 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.006 at 2013-03-02 20:18:52 +0000
+version 0.007 at 2013-03-02 22:53:49 +0000
 ------------------------------------------
+
+  Change: 2ffa8fee38ce3539eaadaad947c8ba33a2bc14f1
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-03-02 23:52:51 +0000
+
+    Tuning of the documentation, especially adding the Run::Test trick 
 
   Change: 93ee3cec036a42985e95d945174b13e6cda8cc81
   Author: Torsten Raudssus <torsten@raudss.us>
