@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::Plugin::Alien::VERSION = '0.005';
+  $Dist::Zilla::Plugin::Alien::VERSION = '0.006';
 }
 # ABSTRACT: Use Alien::Base with Dist::Zilla
 
@@ -165,7 +165,9 @@ around module_build_args => sub {
 		alien_name => $self->name,
 		alien_repository => {
 			protocol => $self->repo_uri->scheme,
-			host => $self->repo_uri->host_port,
+			host => $self->repo_uri->default_port == $self->repo_uri->port
+				? $self->repo_uri->host
+				: $self->repo_uri->host_port,
 			location => $self->repo_uri->path,
 			pattern => qr/^$pattern$/,
 		},
@@ -185,7 +187,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 

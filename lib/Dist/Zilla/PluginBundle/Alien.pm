@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.005';
+  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.006';
 }
 # ABSTRACT: Dist::Zilla::PluginBundle::Basic for Alien
 
@@ -41,7 +41,7 @@ Dist::Zilla::PluginBundle::Alien - Dist::Zilla::PluginBundle::Basic for Alien
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 

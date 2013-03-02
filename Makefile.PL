@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "Use Alien::Base with Dist::Zilla",
   "AUTHOR" => "Torsten Raudssus <torsten\@raudss.us>",
   "BUILD_REQUIRES" => {
+    "Test::LoadAllModules" => "0.021",
     "Test::More" => "0.96"
   },
   "CONFIGURE_REQUIRES" => {
@@ -27,7 +28,7 @@ my %WriteMakefileArgs = (
     "File::ShareDir" => "1.03",
     "Path::Class" => "0.013"
   },
-  "VERSION" => "0.005",
+  "VERSION" => "0.006",
   "test" => {
     "TESTS" => "t/*.t"
   }

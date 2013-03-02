@@ -1,10 +1,16 @@
 ==================================================
-Changes from 1739-05-15 00:00:00 +0000 to present.
+Changes from 1739-05-19 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.005 at 2013-02-26 23:58:52 +0000
+version 0.006 at 2013-03-02 20:18:52 +0000
 ------------------------------------------
+
+  Change: 93ee3cec036a42985e95d945174b13e6cda8cc81
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-03-02 21:18:36 +0000
+
+    Handling of default port more proper 
 
   Change: 566c3731938db0320340f306a316630db8049a52
   Author: Torsten Raudssus <torsten@raudss.us>

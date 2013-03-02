@@ -3,6 +3,7 @@ abstract: 'Use Alien::Base with Dist::Zilla'
 author:
   - 'Torsten Raudssus <torsten@raudss.us>'
 build_requires:
+  Test::LoadAllModules: 0.021
   Test::More: 0.96
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -21,7 +22,7 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.005
+version: 0.006
 x_Dist_Zilla:
   perl:
     version: 5.014002
@@ -128,7 +129,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Prereqs:
           phase: test
           type: requires
-      name: '@Author::GETTY/TestMoreWithSubtests'
+      name: '@Author::GETTY/TestsOfAuthorGETTY'
       version: 4.300030
     -
       class: Dist::Zilla::Plugin::ChangelogFromGit

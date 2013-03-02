@@ -34,6 +34,7 @@
       },
       "test" : {
          "requires" : {
+            "Test::LoadAllModules" : "0.021",
             "Test::More" : "0.96"
          }
       }
@@ -47,7 +48,7 @@
          "web" : "https://github.com/Getty/p5-dist-zilla-plugin-alien"
       }
    },
-   "version" : "0.005",
+   "version" : "0.006",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.014002"
@@ -181,7 +182,7 @@
                   "type" : "requires"
                }
             },
-            "name" : "@Author::GETTY/TestMoreWithSubtests",
+            "name" : "@Author::GETTY/TestsOfAuthorGETTY",
             "version" : "4.300030"
          },
          {
