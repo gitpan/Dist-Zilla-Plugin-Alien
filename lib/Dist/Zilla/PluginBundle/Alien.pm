@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.007';
+  $Dist::Zilla::PluginBundle::Alien::VERSION = '0.008';
 }
 # ABSTRACT: Dist::Zilla::PluginBundle::Basic for Alien
 
@@ -33,6 +33,7 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -41,7 +42,7 @@ Dist::Zilla::PluginBundle::Alien - Dist::Zilla::PluginBundle::Basic for Alien
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNOPSIS
 
@@ -69,4 +70,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

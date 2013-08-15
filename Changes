@@ -1,10 +1,62 @@
 ==================================================
-Changes from 1739-05-19 00:00:00 +0000 to present.
+Changes from 1739-11-01 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.007 at 2013-03-02 22:53:49 +0000
+version 0.008 at 2013-08-15 18:33:55 +0000
 ------------------------------------------
+
+  Change: c1bd9bc731378362aac0455f4ffb2abb09699f19
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-08-15 10:04:01 +0000
+
+    Merge pull request #1 from zmughal/feature/protocol-local-support
+
+    Add support for local repositories 
+
+  Change: 42db71ab6890f9621494dbadea670214faa030b9
+  Author: Torsten Raudssus <torsten@raudss.us>
+  Date : 2013-08-15 10:03:29 +0000
+
+    Merge pull request #2 from zmughal/feature/option-build-commands
+
+    add option to pass build/install commands 
+
+  Change: 349990b89b0534c1b5612648b66a3de47abbbcbb
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-15 07:33:53 +0000
+
+    fix comment 
+
+  Change: 7d454e3b5021ae3e273fd806b161f99317848343
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-15 07:32:20 +0000
+
+    add option to pass install commands 
+
+  Change: 6038823c5c049b8630349ae7af68b339923e19dd
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-12 08:19:04 +0000
+
+    indicate that build commands are optional 
+
+  Change: 5499cd9fe323442f90d7d8d1aed4c6f7c6e297a3
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-12 08:14:39 +0000
+
+    add option to pass build commands 
+
+  Change: 6dbb8e3b2b2a370992404a7bd3b68bc1b3083ca7
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-12 07:19:48 +0000
+
+    document usage of file: scheme for local repository 
+
+  Change: 73e173b5a1e4800cb3b25ff4369025b69af24c45
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-07-12 07:10:34 +0000
+
+    add support for local repository 
 
   Change: 2ffa8fee38ce3539eaadaad947c8ba33a2bc14f1
   Author: Torsten Raudssus <torsten@raudss.us>

@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::Plugin::Alien::VERSION = '0.007';
+  $Dist::Zilla::Plugin::Alien::VERSION = '0.008';
 }
 # ABSTRACT: Use Alien::Base with Dist::Zilla
 
@@ -93,6 +93,22 @@ sub _build_pattern {
 	);
 }
 
+has build_command => (
+	isa => 'ArrayRef[Str]',
+	is => 'rw',
+);
+
+has install_command => (
+	isa => 'ArrayRef[Str]',
+	is => 'rw',
+);
+
+# multiple build/install commands return as an arrayref
+around mvp_multivalue_args => sub {
+  my ($orig, $self) = @_;
+  return ($self->$orig, 'build_command', 'install_command');
+};
+
 sub register_prereqs {
 	my ( $self ) = @_;
 	$self->zilla->register_prereqs({
@@ -164,13 +180,19 @@ around module_build_args => sub {
 		%{ $self->$orig(@args) },
 		alien_name => $self->name,
 		alien_repository => {
-			protocol => $self->repo_uri->scheme,
-			host => $self->repo_uri->default_port == $self->repo_uri->port
-				? $self->repo_uri->host
-				: $self->repo_uri->host_port,
+			protocol => $self->repo_uri->scheme eq 'file'
+				? 'local'
+				: $self->repo_uri->scheme,
+			host => $self->repo_uri->can('port') # local files do not have port
+				? ( $self->repo_uri->default_port == $self->repo_uri->port
+					? $self->repo_uri->host
+					: $self->repo_uri->host_port )
+				: '',
 			location => $self->repo_uri->path,
 			pattern => qr/^$pattern$/,
 		},
+		(alien_build_commands => $self->build_command)x!! $self->build_command,
+		(alien_install_commands => $self->install_command)x!! $self->install_command,
 	};
 };
 
@@ -179,6 +201,7 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -187,7 +210,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =head1 SYNOPSIS
 
@@ -204,6 +227,13 @@ In your I<dist.ini>:
   pattern_version = ([\d\.]+)
   pattern_suffix = \.tar\.gz
   pattern = myapp-([\d\.]+)\.tar\.gz
+
+  # commands used to build (optional)
+  build_command = %pconfigure --prefix=%s
+  # ...
+
+  # commands uses to install (optional)
+  install_command = make install
 
 =head1 DESCRIPTION
 
@@ -230,6 +260,14 @@ distribution.
 The only required parameter, defines the path for the packages of the product
 you want to alienfy. This must not include the filename.
 
+To indicate a local repository use the C<file:> scheme:
+
+   # located in the base directory
+   repo = file:.
+
+   # located in the inc/ directory relative to the base
+   repo = file:inc
+
 =head2 pattern
 
 The pattern is used to define the filename to be expected from the repo of the
@@ -248,6 +286,22 @@ guarantees that its available via the PATH).
 The name of the Alien package, this is used for the pattern matching filename.
 If none is given, then the name of the distribution is used, but the I<Alien->
 is cut off.
+
+=head2 build_command
+
+The ordered sequence of commands used to build the distribution (passed to the
+C<alien_build_commands> option). This is optional.
+
+  # configure then make
+  build_command = %pconfigure --prefix=%s
+  build_command = make
+
+=head2 install_command
+
+The ordered sequence of commands used to install the distribution (passed to the
+C<alien_install_commands> option). This is optional.
+
+  install_command = make install
 
 =head1 InstallRelease
 
@@ -276,4 +330,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
