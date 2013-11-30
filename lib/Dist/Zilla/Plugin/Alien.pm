@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
 }
 {
-  $Dist::Zilla::Plugin::Alien::VERSION = '0.008';
+  $Dist::Zilla::Plugin::Alien::VERSION = '0.009';
 }
 # ABSTRACT: Use Alien::Base with Dist::Zilla
 
@@ -117,7 +117,7 @@ sub register_prereqs {
 		},
 		'Alien::Base' => '0.002',
 		'File::ShareDir' => '1.03',
-		'Path::Class' => '0.013',
+		@{ $self->split_bins } > 0 ? ('Path::Class' => '0.013') : (),
 	);
 	$self->zilla->register_prereqs({
 			type  => 'requires',
@@ -125,7 +125,7 @@ sub register_prereqs {
 		},
 		'Alien::Base' => '0.002',
 		'File::ShareDir' => '1.03',
-		'Path::Class' => '0.013',
+		@{ $self->split_bins } > 0 ? ('Path::Class' => '0.013') : (),
 	);
 }
 
@@ -210,7 +210,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.008
+version 0.009
 
 =head1 SYNOPSIS
 
