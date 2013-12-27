@@ -1,10 +1,21 @@
 ==================================================
-Changes from 1740-02-16 00:00:00 +0000 to present.
+Changes from 1740-03-14 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.009 at 2013-11-30 04:27:46 +0000
+version 0.010 at 2013-12-27 02:51:07 +0000
 ------------------------------------------
+
+  Change: f3a8620a6f108b8fefe71ccb2e69b6dbeddd5cf2
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2013-12-26 20:45:48 +0000
+
+    use string for pattern instead of using a compiled regex
+
+    - because the compiled regex may add flags that can not be parsed
+    with
+
+    older versions of Perl 
 
   Change: 9da000c53b5fadaa65952087b0841ff0d4ea7b7a
   Author: Zaki Mughal [sivoais] <zaki.mughal@gmail.com>
