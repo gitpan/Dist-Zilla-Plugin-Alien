@@ -1,10 +1,36 @@
 ==================================================
-Changes from 1740-03-14 00:00:00 +0000 to present.
+Changes from 1740-11-27 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.010 at 2013-12-27 02:51:07 +0000
+version 0.011 at 2014-09-11 06:23:57 +0000
 ------------------------------------------
+
+  Change: 5b81a910d88338c69adc235a5d3f67f9a383d9da
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2014-09-11 01:23:23 +0000
+
+    fix whitespace 
+
+  Change: a2b1a381e0b2a2d352da4ec664d9d8a191bbbfeb
+  Author: Zaki Mughal [sivoais] <zaki.mughal@gmail.com>
+  Date : 2014-09-10 11:58:51 +0000
+
+    Merge pull request #4 from plicease/alien_0.005
+
+    add support for Alien 0.005 features 
+
+  Change: de2674424d99a00481ff6ccb434bbc474a2f5329
+  Author: Graham Ollis <plicease@cpan.org>
+  Date : 2014-09-10 12:50:56 +0000
+
+    usage of 0.005 features will require Alien::Base 0.005 
+
+  Change: dc24c1a4ded53bd6c9e90847b5db97616faee7e8
+  Author: Graham Ollis <plicease@cpan.org>
+  Date : 2014-09-10 12:41:04 +0000
+
+    add support for new Alien::Base options 
 
   Change: f3a8620a6f108b8fefe71ccb2e69b6dbeddd5cf2
   Author: Zakariyya Mughal <zaki.mughal@gmail.com>
