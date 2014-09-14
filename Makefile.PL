@@ -26,10 +26,9 @@ my %WriteMakefileArgs = (
     "Path::Class" => "0.013"
   },
   "TEST_REQUIRES" => {
-    "Test::LoadAllModules" => "0.021",
     "Test::More" => "0.96"
   },
-  "VERSION" => "0.012",
+  "VERSION" => "0.013",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -41,7 +40,6 @@ my %FallbackPrereqs = (
   "Dist::Zilla" => "4.300030",
   "File::ShareDir" => "1.03",
   "Path::Class" => "0.013",
-  "Test::LoadAllModules" => "0.021",
   "Test::More" => "0.96"
 );
 

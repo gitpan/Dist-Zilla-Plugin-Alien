@@ -3,8 +3,17 @@ Changes from 1740-11-30 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.012 at 2014-09-14 22:30:02 +0000
+version 0.013 at 2014-09-14 23:09:06 +0000
 ------------------------------------------
+
+  Change: 72b76934cc1fdd9d2af5a38fb92bc68232abbd15
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2014-09-14 18:06:21 +0000
+
+    remove Test::LoadModules test dependency
+
+    - from RT#98840 <https://rt.cpan.org/Ticket/Display.html?id=98840> -
+    Thanks SREZIC and GETTY 
 
   Change: f89c936ca0b251d172bdd50657bbead13cd7aec4
   Author: Zakariyya Mughal <zaki.mughal@gmail.com>

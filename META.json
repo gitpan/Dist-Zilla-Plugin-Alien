@@ -34,7 +34,6 @@
       },
       "test" : {
          "requires" : {
-            "Test::LoadAllModules" : "0.021",
             "Test::More" : "0.96"
          }
       }
@@ -48,7 +47,7 @@
          "web" : "https://github.com/Getty/p5-dist-zilla-plugin-alien"
       }
    },
-   "version" : "0.012",
+   "version" : "0.013",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016003"
@@ -367,7 +366,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.012",
+                  "tag" : "0.013",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

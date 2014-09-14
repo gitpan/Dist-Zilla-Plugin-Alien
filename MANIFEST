@@ -10,5 +10,4 @@ dist.ini
 lib/Dist/Zilla/Plugin/Alien.pm
 lib/Dist/Zilla/PluginBundle/Alien.pm
 t/load.t
-t/load_bundle.t
 t/release-pod-syntax.t

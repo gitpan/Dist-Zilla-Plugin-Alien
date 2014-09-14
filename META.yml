@@ -3,7 +3,6 @@ abstract: 'Use Alien::Base with Dist::Zilla'
 author:
   - 'Torsten Raudssus <torsten@raudss.us>'
 build_requires:
-  Test::LoadAllModules: 0.021
   Test::More: 0.96
 configure_requires:
   ExtUtils::MakeMaker: 0
@@ -22,7 +21,7 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.012
+version: 0.013
 x_Dist_Zilla:
   perl:
     version: 5.016003
@@ -270,7 +269,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 0.012
+          tag: 0.013
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
