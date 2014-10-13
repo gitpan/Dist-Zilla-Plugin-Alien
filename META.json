@@ -13,6 +13,11 @@
       "version" : "2"
    },
    "name" : "Dist-Zilla-Plugin-Alien",
+   "no_index" : {
+      "directory" : [
+         "corpus"
+      ]
+   },
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -47,10 +52,10 @@
          "web" : "https://github.com/Getty/p5-dist-zilla-plugin-alien"
       }
    },
-   "version" : "0.013",
+   "version" : "0.014",
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.016003"
+         "version" : "5.018001"
       },
       "plugins" : [
          {
@@ -314,7 +319,7 @@
                }
             },
             "name" : "@Author::GETTY/PodWeaver",
-            "version" : "4.005"
+            "version" : "4.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Check",
@@ -366,7 +371,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.013",
+                  "tag" : "0.014",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -414,6 +419,11 @@
                }
             },
             "name" : "TestRequires",
+            "version" : "5.020"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MetaNoIndex",
+            "name" : "MetaNoIndex",
             "version" : "5.020"
          },
          {

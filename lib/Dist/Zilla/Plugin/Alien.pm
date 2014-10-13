@@ -3,7 +3,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
 }
 # ABSTRACT: Use Alien::Base with Dist::Zilla
-$Dist::Zilla::Plugin::Alien::VERSION = '0.013';
+$Dist::Zilla::Plugin::Alien::VERSION = '0.014';
 use Moose;
 extends 'Dist::Zilla::Plugin::ModuleBuild';
 with 'Dist::Zilla::Role::PrereqSource', 'Dist::Zilla::Role::FileGatherer';
@@ -110,19 +110,50 @@ has autoconf_with_pic => (
 	is => 'rw',
 );
 
+has inline_auto_include => (
+	isa => 'ArrayRef[Str]',
+	is => 'rw',
+	default => sub { [] },
+);
+
+has msys => (
+        isa => 'Int',
+        is  => 'rw',
+);
+
+has bin_requires => (
+        isa => 'ArrayRef[Str]',
+        is  => 'rw',
+        default => sub { [] },
+);
+
+sub _bin_requires_hash {
+	my($self) = @_;
+	my %bin_requires = map { /^\s*(.*?)\s*=\s*(.*)\s*$/ ? ($1 => $2) : ($_ => 0) } @{ $self->bin_requires };
+	\%bin_requires;
+}
+
 # multiple build/install commands return as an arrayref
 around mvp_multivalue_args => sub {
   my ($orig, $self) = @_;
-  return ($self->$orig, 'build_command', 'install_command');
+  return ($self->$orig, 'build_command', 'install_command', 'inline_auto_include', 'bin_requires');
 };
 
 sub register_prereqs {
 	my ( $self ) = @_;
 
 	my $ab_version = '0.002';
+	my $configure_requires = {};
 
 	if(defined $self->isolate_dynamic || defined $self->autoconf_with_pic || grep /%c/, @{ $self->build_command || [] }) {
 		$ab_version = '0.005';
+	}
+
+	if(@{ $self->inline_auto_include } || @{ $self->bin_requires } || defined $self->msys) {
+		$ab_version = '0.006';
+		if(@{ $self->bin_requires }) {
+			$configure_requires = $self->_bin_requires_hash;
+		}
 	}
 
 	$self->zilla->register_prereqs({
@@ -132,6 +163,7 @@ sub register_prereqs {
 		'Alien::Base' => $ab_version,
 		'File::ShareDir' => '1.03',
 		@{ $self->split_bins } > 0 ? ('Path::Class' => '0.013') : (),
+		%$configure_requires,
 	);
 	$self->zilla->register_prereqs({
 			type  => 'requires',
@@ -190,6 +222,9 @@ __EOT__
 around module_build_args => sub {
 	my ($orig, $self, @args) = @_;
 	my $pattern = $self->pattern;
+
+	my $bin_requires = $self->_bin_requires_hash;
+
 	return {
 		%{ $self->$orig(@args) },
 		alien_name => $self->name,
@@ -213,8 +248,11 @@ around module_build_args => sub {
 		},
 		(alien_build_commands => $self->build_command)x!! $self->build_command,
 		(alien_install_commands => $self->install_command)x!! $self->install_command,
+		(alien_inline_auto_include => $self->inline_auto_include)x!! $self->inline_auto_include,
 		defined $self->autoconf_with_pic ? (alien_autoconf_with_pic => $self->autoconf_with_pic) : (),
 		defined $self->isolate_dynamic ? (alien_isolate_dynamic => $self->isolate_dynamic) : (),
+		defined $self->msys ? (alien_msys => $self->msys) : (),
+		%$bin_requires ? ( alien_bin_requires => \%$bin_requires ) : (),
 	};
 };
 
@@ -232,7 +270,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.013
+version 0.014
 
 =head1 SYNOPSIS
 
@@ -350,6 +388,26 @@ scripts which are not managed by autoconf may complain and die with this option.
 
 Usage of this attribute will bump the requirement of L<Alien::Base> up to 0.005
 for your distribution.
+
+=head2 inline_auto_include
+
+List of header files to automatically include (see L<Inline::C#auto_include>) when
+the Alien module is used with L<Inline::C> or L<Inline::CPP>.
+
+=head2 msys
+
+Force the use of L<Alien::MSYS> when building on Windows.  Normally this is only
+done if L<Alien::Base::ModuleBuild> can detect that you are attempting to use
+an autotools style C<configure> script.
+
+=head2 bin_requires
+
+Require the use of a binary tool Alien distribution.  You can optionally specify
+a version using the equal C<=> sign.
+
+ [Alien]
+ bin_requires = Alien::patch
+ bin_requires = Alien::gmake = 0.03
 
 =head1 InstallRelease
 

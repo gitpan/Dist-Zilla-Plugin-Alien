@@ -1,10 +1,62 @@
 ==================================================
-Changes from 1740-11-30 00:00:00 +0000 to present.
+Changes from 1740-12-29 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.013 at 2014-09-14 23:09:06 +0000
+version 0.014 at 2014-10-13 09:02:27 +0000
 ------------------------------------------
+
+  Change: 69a82181e0d1b87831e0bd6c87fb6f1308309d2f
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2014-10-13 04:02:08 +0000
+
+    whitespace 
+
+  Change: c9f9dd01f0856886cd7a3545a1a0a8017a765716
+  Author: Zaki Mughal [sivoais] <zaki.mughal@gmail.com>
+  Date : 2014-10-13 03:50:25 +0000
+
+    Merge pull request #6 from plicease/alien_0.006
+
+    Support for some more Alien::Base 0.006 options 
+
+  Change: 1304496d5c713ad1aa47918d6d0b04e793aaaa3f
+  Author: Graham Ollis <perl@wdlabs.com>
+  Date : 2014-10-09 20:22:07 +0000
+
+    also need to add as configure requires 
+
+  Change: cac51139c6819337aa954e4a221254ccf8185fdc
+  Author: Graham Ollis <plicease@cpan.org>
+  Date : 2014-10-09 17:49:24 +0000
+
+    document new options 
+
+  Change: 017635163d0abe2cf820ff113af53b460916f1cc
+  Author: Graham Ollis <plicease@cpan.org>
+  Date : 2014-10-09 17:46:47 +0000
+
+    add bin_requires option 
+
+  Change: 016e234f7a99ce6b6d243aae4cd875bb4f928555
+  Author: Graham Ollis <plicease@cpan.org>
+  Date : 2014-10-09 17:30:49 +0000
+
+    add msys option 
+
+  Change: 46b4f46b3906355aa17107be5388c3f252938e00
+  Author: Zaki Mughal [sivoais] <zaki.mughal@gmail.com>
+  Date : 2014-09-22 16:55:42 +0000
+
+    Merge pull request #5 from plicease/inline_auto_include
+
+    support for inline_auto_include 
+
+  Change: c4a9100d855a2e235dac208ca43d8bd3005237ca
+  Author: Graham Ollis <perl@wdlabs.com>
+  Date : 2014-09-22 17:46:57 +0000
+
+    support for inline_auto_include 
 
   Change: 72b76934cc1fdd9d2af5a38fb92bc68232abbd15
   Author: Zakariyya Mughal <zaki.mughal@gmail.com>

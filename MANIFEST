@@ -6,8 +6,12 @@ META.json
 META.yml
 Makefile.PL
 README
+corpus/DZT/lib/DZT.pm
 dist.ini
 lib/Dist/Zilla/Plugin/Alien.pm
 lib/Dist/Zilla/PluginBundle/Alien.pm
+t/bin_requires.t
+t/inline_auto_include.t
 t/load.t
+t/msys.t
 t/release-pod-syntax.t

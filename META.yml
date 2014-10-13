@@ -13,6 +13,9 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Dist-Zilla-Plugin-Alien
+no_index:
+  directory:
+    - corpus
 requires:
   Alien::Base: 0.002
   Dist::Zilla: 4.300030
@@ -21,10 +24,10 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.013
+version: 0.014
 x_Dist_Zilla:
   perl:
-    version: 5.016003
+    version: 5.018001
   plugins:
     -
       class: Dist::Zilla::Plugin::GatherDir
@@ -230,7 +233,7 @@ x_Dist_Zilla:
               name: '@GETTY/List'
               version: 4.006
       name: '@Author::GETTY/PodWeaver'
-      version: 4.005
+      version: 4.006
     -
       class: Dist::Zilla::Plugin::Git::Check
       config:
@@ -269,7 +272,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 0.013
+          tag: 0.014
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
@@ -303,6 +306,10 @@ x_Dist_Zilla:
           phase: test
           type: requires
       name: TestRequires
+      version: 5.020
+    -
+      class: Dist::Zilla::Plugin::MetaNoIndex
+      name: MetaNoIndex
       version: 5.020
     -
       class: Dist::Zilla::Plugin::FinderCode
