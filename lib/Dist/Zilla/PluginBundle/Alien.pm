@@ -1,7 +1,7 @@
 package Dist::Zilla::PluginBundle::Alien;
 our $AUTHORITY = 'cpan:GETTY';
 # ABSTRACT: Dist::Zilla::PluginBundle::Basic for Alien
-$Dist::Zilla::PluginBundle::Alien::VERSION = '0.015';
+$Dist::Zilla::PluginBundle::Alien::VERSION = '0.016';
 use Moose;
 use Moose::Autobox;
 use Dist::Zilla;
@@ -37,7 +37,7 @@ Dist::Zilla::PluginBundle::Alien - Dist::Zilla::PluginBundle::Basic for Alien
 
 =head1 VERSION
 
-version 0.015
+version 0.016
 
 =head1 SYNOPSIS
 

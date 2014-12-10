@@ -24,7 +24,7 @@ requires:
 resources:
   homepage: https://github.com/Getty/p5-dist-zilla-plugin-alien
   repository: https://github.com/Getty/p5-dist-zilla-plugin-alien.git
-version: 0.015
+version: 0.016
 x_Dist_Zilla:
   perl:
     version: 5.016003
@@ -277,7 +277,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 0.015
+          tag: 0.016
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
