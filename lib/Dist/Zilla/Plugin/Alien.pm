@@ -1,9 +1,7 @@
 package Dist::Zilla::Plugin::Alien;
-BEGIN {
-  $Dist::Zilla::Plugin::Alien::AUTHORITY = 'cpan:GETTY';
-}
+our $AUTHORITY = 'cpan:GETTY';
 # ABSTRACT: Use Alien::Base with Dist::Zilla
-$Dist::Zilla::Plugin::Alien::VERSION = '0.014';
+$Dist::Zilla::Plugin::Alien::VERSION = '0.015';
 use Moose;
 extends 'Dist::Zilla::Plugin::ModuleBuild';
 with 'Dist::Zilla::Role::PrereqSource', 'Dist::Zilla::Role::FileGatherer';
@@ -179,7 +177,7 @@ has "+mb_class" => (
 	default => 'Alien::Base::ModuleBuild',
 );
 
-sub gather_files {
+after gather_files => sub {
 	my ( $self ) = @_;
 
 	my $template = <<'__EOT__';
@@ -217,7 +215,7 @@ __EOT__
 
 		$self->add_file($file);
 	}
-}
+};
 
 around module_build_args => sub {
 	my ($orig, $self, @args) = @_;
@@ -270,7 +268,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.014
+version 0.015
 
 =head1 SYNOPSIS
 

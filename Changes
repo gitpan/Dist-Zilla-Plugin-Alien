@@ -1,10 +1,19 @@
 ==================================================
-Changes from 1740-12-29 00:00:00 +0000 to present.
+Changes from 1741-02-25 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.014 at 2014-10-13 09:02:27 +0000
+version 0.015 at 2014-12-10 19:42:19 +0000
 ------------------------------------------
+
+  Change: c3e8674a9391c4687af0248d69d6cdf60f310fd5
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2014-12-10 13:37:04 +0000
+
+    `gather_files` turned into an `after` method modifier
+
+    This is so that `DZ::Plugin::ModuleBuild` can run its own
+    `gather_files` method and `Build.PL` is available. 
 
   Change: 69a82181e0d1b87831e0bd6c87fb6f1308309d2f
   Author: Zakariyya Mughal <zaki.mughal@gmail.com>
