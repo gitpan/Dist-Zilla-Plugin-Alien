@@ -1,10 +1,16 @@
 ==================================================
-Changes from 1741-02-25 00:00:00 +0000 to present.
+Changes from 1741-02-27 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.016 at 2014-12-10 19:48:33 +0000
+version 0.017 at 2014-12-12 03:56:34 +0000
 ------------------------------------------
+
+  Change: cb3468305c01ae505885200c364e583dc2281391
+  Author: Zakariyya Mughal <zaki.mughal@gmail.com>
+  Date : 2014-12-11 21:55:48 +0000
+
+    remove unused Moose::Autobox dep 
 
   Change: c3e8674a9391c4687af0248d69d6cdf60f310fd5
   Author: Zakariyya Mughal <zaki.mughal@gmail.com>

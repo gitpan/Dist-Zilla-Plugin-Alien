@@ -1,7 +1,7 @@
 package Dist::Zilla::Plugin::Alien;
 our $AUTHORITY = 'cpan:GETTY';
 # ABSTRACT: Use Alien::Base with Dist::Zilla
-$Dist::Zilla::Plugin::Alien::VERSION = '0.016';
+$Dist::Zilla::Plugin::Alien::VERSION = '0.017';
 use Moose;
 extends 'Dist::Zilla::Plugin::ModuleBuild';
 with 'Dist::Zilla::Role::PrereqSource', 'Dist::Zilla::Role::FileGatherer';
@@ -268,7 +268,7 @@ Dist::Zilla::Plugin::Alien - Use Alien::Base with Dist::Zilla
 
 =head1 VERSION
 
-version 0.016
+version 0.017
 
 =head1 SYNOPSIS
 
